@@ -27,5 +27,14 @@ body,html {
     background-color: yellowgreen;
     height: 50px;
     width: 50px;
+    border: 1px solid red;
+}
+
+
+#add-image-button {
+    background-color: yellowgreen;
+    height: 50px;
+    width: 50px;
+    border: 1px solid red;
 
 }
