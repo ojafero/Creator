@@ -2,6 +2,10 @@
 let addTextButton = document.querySelector('#add-text-button');
 
 addTextButton.addEventListener('click',()=>{
+    
+    //resetElementClickedOnCanvas
+    resetDivOnCanvasClicked();
+
     //addTextButton.style.borderColor = "red";
     //addTextButton.style.borderWidth = "thick";
     console.log(addTextButton.style.borderRight);

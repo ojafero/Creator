@@ -10,3 +10,8 @@ function getUniqueIndex(){
 function resetCurrentCategory(){
     currentCategory = null;
 }
+
+function resetDivOnCanvasClicked(){
+    currentDivOnCanvasClicked = null;
+
+}

@@ -1,31 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Builder</title>
-    <link rel = "stylesheet" href = "style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creator</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css" />
     <script defer src="constants.js"></script>
     <script defer src="globals.js"></script>
     <script defer src="sidebar_click_listeners.js"></script>
     <script defer src="canvas_event_listeners.js"></script>
     <script defer src="text_controller.js"></script>
-</head>
-<body>
-    <div id = "sidebar">
-        <div id = "add-text-button" data-identifier = "0">
-            Add Text
-        </div>
-        <div id = "more-controls">
-        </div>
+    <script>
+        function changeToItalics(){
+            document.getElementById("demo").style.fontStyle = "italic";
+        }
+        $(document).ready(function() {
+            const demoNode = document.createElement('div');
+            demoNode.innerHTML='<div class="field has-addons">  <p class="control">    <button class="button">      <span class="icon is-small">        <i class="fas fa-bold"></i>      </span>      <span>Bold</span>    </button>  </p>  <p class="control">    <button class="button">      <span class="icon is-small">        <i class="fas fa-italic"></i>      </span>      <span>Italic</span>    </button>  </p>  <p class="control">    <button class="button">      <span class="icon is-small">        <i class="fas fa-underline"></i>      </span>      <span>Underline</span>    </button>  </p></div>';
+            let children = demoNode.querySelectorAll('button');
+            console.log(children);
+            children[0].onclick = function() {
+                const currentButton = document.getElementById("demo");
+                const elementProperty = document.getElementById("demo").style.fontWeight;
+                console.log(elementProperty);
+                if(elementProperty != null && elementProperty != "bold") currentButton.style.fontWeight = "bold";
+                else {
+                    currentButton.style.fontWeight = "normal";
+                }
+            }
+            children[1].onclick = function() {
+                const currentButton = document.getElementById("demo");
+                const elementProperty = document.getElementById("demo").style.fontStyle;
+                console.log(elementProperty);
+                if(elementProperty != null && elementProperty != "italic") currentButton.style.fontStyle = "italic";
+                else {
+                    currentButton.style.fontStyle = "normal";
+                }
+                //document.getElementById("demo").style.fontStyle = "italic";
+            }
+            $('#more-controls').append(demoNode);
+
+            let textField = document.getElementById("text-input-field");
+            textField.value = document.querySelector('#demo').innerText;
+
+            textField.onkeyup = function (){
+                const textNode = document.querySelector('#demo');
+                console.log("modify textfield value");
+                textNode.innerText = textField.value;
+            }
+
+            let topPaddingField = document.getElementById
+            ("text-top-padding-field");
+            const textNode = document.querySelector('#demo');
+            console.log("default top padding");
+            console.log(textNode.style.paddingTop);
+            topPaddingField.value =  textNode.style.paddingTop; 
+            topPaddingField.onkeyup = function (){
+                console.log("modify padding value value");
+                textNode.style.paddingTop = topPaddingField.value; 
+            }
+
+        });
+
+       
+       
+
+    </script>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="add-text-button" data-identifier="0">Add Text</div>
+      <div id="more-controls"> 
+        <input id = "text-input-field" class="input is-rounded" type="text" placeholder="Top">
+        <input style = "width: 60px" id = "text-top-padding-field" class="input is-small" type="text" placeholder="top padding"> 
+      </div>
     </div>
-    <div id = "canvas">
-        <div id= "demo"> Dummy Test Text</div>
+    <div id="canvas">
+      <div style = "padding-top: 30px" id="demo">Dummy Test Text</div>
     </div>
     <script>
-        document.getElementById("demo").style.fontStyle = "italic";
-        /**
+      /**
         document.getElementById("color").oninput = function() {
             document.getElementById('dummy-test-text').style.color = this.value;
         }
@@ -35,5 +100,5 @@
             document.getElementById('dummy-test-text').style.backgroundColor = colorPickerValue;
         }**/
     </script>
-</body>
+  </body>
 </html>
