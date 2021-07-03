@@ -1,0 +1,31 @@
+body,html {
+    height: 100%;
+}
+
+#sidebar {
+    position: absolute;
+    width: 208px;
+    top: 10%;
+    height: 90%;
+    left: 0px;
+    background: #ffffff;
+    border: 1px solid #d7d7d7;
+    background-color: whitesmoke;
+}
+
+#canvas{
+    position: absolute;
+    left: 208px;
+    width: calc(100% - 208px);
+    top: 10%;
+    height: 90%;
+    background-color: lightblue;
+}
+
+
+#add-text-button {
+    background-color: yellowgreen;
+    height: 50px;
+    width: 50px;
+
+}

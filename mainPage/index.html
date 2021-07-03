@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script defer src="constants.js"></script>
+    <script defer src="globals.js"></script>
+    <script defer src="sidebar_click_listeners.js"></script>
+    <script defer src="canvas_event_listeners.js"></script>
+    <script defer src="text_controller.js"></script>
+</head>
+<body>
+    <div id = "sidebar">
+        <div id = "add-text-button" data-identifier = "0">
+            Add Text
+        </div>
+        <div id = "more-controls">
+        </div>
+    </div>
+    <div id = "canvas">
+        <div id= "demo"> Dummy Test Text</div>
+    </div>
+    <script>
+        document.getElementById("demo").style.fontStyle = "italic";
+        /**
+        document.getElementById("color").oninput = function() {
+            document.getElementById('dummy-test-text').style.color = this.value;
+        }
+        function updateTextColor(){
+            let colorPickerValue = document.getElementById('color').value;
+            console.log(colorPickerValue);
+            document.getElementById('dummy-test-text').style.backgroundColor = colorPickerValue;
+        }**/
+    </script>
+</body>
+</html>
