@@ -1,4 +1,6 @@
 function createImageController(){
+    emptyTheControlSection();
+
     const controlContainerDiv = document.querySelector("#more-controls");
 
     const imgInputPicker = createImageInputPicker();
@@ -13,8 +15,8 @@ function createImageController(){
 
 function createImageInputPicker(){
     const imageInputPicker = document.createElement('div');
-    imageInputPicker.innerHTML = ('<input id="img-input-field" class="input is-rounded" type="text" placeholder="Rounded input">');
-    return imageInputPicker;
+    imageInputPicker.innerHTML = ('<input id="img-input-field" class="input is-rounded" type="text" placeholder="Add Image Link">');
+    return imageInputPicker.querySelector('#img-input-field');
 }
 
 function createWHPicker() {
@@ -26,7 +28,12 @@ function createWHPicker() {
 }
 
 function addEventListenerImageInputPicker(imgInputPicker) {
-    imgInputPicker.oninput = function() {
+    imgInputPicker.onkeyup = function() {
+        console.log('what is the current div clicked?');
+        console.log(currentDivOnCanvasClicked);
+        console.log("current div clicked ended");
+        console.log("currentDivOnCanvasClicked.src");
+        console.log(imgInputPicker.value);
         currentDivOnCanvasClicked.src = imgInputPicker.value;
     }
 }

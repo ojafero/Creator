@@ -8,3 +8,9 @@ function createTextInputFieldComponent(idToSetDiv,classToSetToDiv,placeholderTex
     textInputPicker.setAttribute("placeholder",`${placeholderText}`);
     return textInputPicker;
 }
+
+
+function emptyTheControlSection(){
+    const controlContainerDiv = document.querySelector("#more-controls");
+    controlContainerDiv.innerHTML = "";
+}

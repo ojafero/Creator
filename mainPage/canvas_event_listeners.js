@@ -72,6 +72,7 @@ function createImage(clickedDivId){
         imgNode.style.borderStyle = 'solid';
         imgNode.style.borderColor = 'red';
         console.log('create image controller here');
+        createImageController();
 
     });
 
