@@ -16,7 +16,9 @@ function resetDivOnCanvasClicked(){
 }
 
 function returnDividerCSS(textToShow){
-    return `<div class="is-divider" data-content="${textToShow}"></div>`
+    const container = document.createElement('div');
+    container.innerHTML = `<div class="is-divider" data-content="${textToShow}"></div>`;
+    return container;
 }
 
 function resetPickerIndicator(){

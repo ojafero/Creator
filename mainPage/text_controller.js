@@ -49,7 +49,7 @@
 
 
     //add divider
-    paddingInputPickerContainer.innerHTML += returnDividerCSS('Padding (top,down,left,right)');
+    paddingInputPickerContainer.appendChild(returnDividerCSS('Padding (top,down,left,right)'));
 
     //add all 4 directions
     paddingInputPickerContainer.appendChild(topPicker);
@@ -111,7 +111,7 @@
      textInputPickerContainer.setAttribute("id","text-input-picker-container");
 
       //add divider
-      textInputPickerContainer.innerHTML += returnDividerCSS('Text');
+      textInputPickerContainer.appendChild(returnDividerCSS('Text'));
 
      textInputPickerContainer.appendChild(textInputPicker);
      controlContainerDiv.appendChild(textInputPickerContainer);
@@ -139,7 +139,7 @@
     const textControlDiv = document.createElement('div');
 
    //add Divider
-   textControlDiv.innerHTML += returnDividerCSS('Color');
+   textControlDiv.appendChild(returnDividerCSS('Color'));
 
     textControlDiv.setAttribute("id","color-picker-container");
     let colorPicker = addTextColorPicker();
@@ -151,7 +151,7 @@
     const textStylePickerContainer = document.createElement('div');
 
     //add divider
-    textStylePickerContainer.innerHTML += returnDividerCSS('Style');
+    textStylePickerContainer.appendChild(returnDividerCSS('Style'));
 
     textStylePickerContainer.setAttribute("id","text-style-picker-container");
     textStylePicker = addTextStylePicker();

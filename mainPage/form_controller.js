@@ -21,7 +21,7 @@ function createFormController() {
     addDeleteButton (controlContainerDiv)
 
     //add divider
-    controlContainerDiv.innerHTML += returnDividerCSS('Headings');
+    controlContainerDiv.appendChild(returnDividerCSS('Headings'));
 
     const dropdown = createFormSizeSelector();
 

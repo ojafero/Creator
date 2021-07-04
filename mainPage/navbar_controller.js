@@ -7,7 +7,7 @@ function createNavbarController(){
 
     //add divider
     const divContained = document.createElement('div');
-    divContained.innerHTML += returnDividerCSS('Text');
+    divContained.appendChild(returnDividerCSS('Text'));
 
     controlContainerDiv.appendChild(divContained);
 

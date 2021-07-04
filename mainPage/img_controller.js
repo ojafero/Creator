@@ -7,7 +7,7 @@ function createImageController(){
 
 
      //add divider
-     controlContainerDiv.innerHTML += returnDividerCSS('Image Url');
+     controlContainerDiv.appendChild(returnDividerCSS('Image Url'));
 
     const imgInputPicker = createImageInputPicker();
 
@@ -31,7 +31,7 @@ function createWHPicker() {
     const imageHWInputBox = document.createElement('div');
 
      //add divider
-     imageHWInputBox.innerHTML += returnDividerCSS('Image Dimensions');
+     imageHWInputBox.appendChild(returnDividerCSS('Image Dimensions'));
 
     imageHWInputBox.innerHTML += ('<input id="img-height-input" class="input is-small" type="text" placeholder="Height">');
     imageHWInputBox.innerHTML += ('<input id="img-width-input" class="input is-small" type="text" placeholder="Width">');

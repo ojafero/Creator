@@ -13,7 +13,7 @@ function createButtonController() {
     // controlContainerDiv.append(dropdown);
 
     //Seperate delete button from text
-    controlContainerDiv.innerHTML+= returnDividerCSS("Text")
+    controlContainerDiv.appendChild(returnDividerCSS("Text"));
 
     const textField = init_textfield();
     controlContainerDiv.append(textField);
@@ -45,7 +45,7 @@ function init_radiobuttons() {
     const inputFields = document.createElement('div');
     inputFields.id = 'radio-inputs';
 
-    inputFields.innerHTML+= returnDividerCSS("Size - Small, Medium, large, FullWidth")
+    inputFields.appendChild(returnDividerCSS("Size - Small, Medium, large, FullWidth"));
 
     
 
@@ -53,7 +53,7 @@ function init_radiobuttons() {
     const displaySizesForm = addRadioForm(inputFields, 'size','');
     addRadioButtons(displaySizesForm, sizes, 'sizes');
 
-    inputFields.innerHTML+= returnDividerCSS("Color - White, Cyan, Purple, Blue, Green, Red");
+    inputFields.appendChild(returnDividerCSS("Color - White, Cyan, Purple, Blue, Green, Red"));
 
 
 
@@ -61,7 +61,7 @@ function init_radiobuttons() {
     const radioColorForm = addRadioForm(inputFields, 'type', 'Select a type/color: ');
     addRadioButtons(radioColorForm, colors, 'types');
 
-    inputFields.innerHTML+= returnDividerCSS("Color - White, Cyan, Purple, Blue, Green, Red");
+    inputFields.appendChild(returnDividerCSS("Color - White, Cyan, Purple, Blue, Green, Red"));
 
     
     const styles = ['rounded', 'outlined', 'inverted'];
