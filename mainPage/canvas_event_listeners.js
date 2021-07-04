@@ -46,7 +46,8 @@ function buildDiv(clickedDivId){
 function createCustomButton(clickedDivId){
 
     const customButtonContainer = document.createElement('div');
-    customButtonContainer.innerHTML='<button class="button is-normal">Normal</button>';
+    customButtonContainer.id = 'button-container';
+    customButtonContainer.innerHTML='<button class="button">Normal</button>';
 
     const customButton = customButtonContainer.querySelector('button');
 
@@ -65,6 +66,7 @@ function createCustomButton(clickedDivId){
         document.getElementById('indicate-personalize-text').innerHTML = "Button";
 
         console.log("Include function here to add more functionality to button");
+        createButtonController();
 
     }); 
 
