@@ -63,6 +63,7 @@ function createForm(clickedDivId){
              document.getElementById('indicate-personalize-text').innerHTML = "Form";
     
             emptyTheControlSection();
+            createFormController();
     
         });
         resetCurrentCategory();

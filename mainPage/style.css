@@ -110,6 +110,46 @@ hr.solid {
     font-size: 11px;
 }
 
+.bg-modal {
+    width:100%;
+    height:100%;
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display:none;
+    
+}
+
+.modal-content {
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    opacity: 1;
+    border-radius: 9px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.input-field-popup {
+    width: 50%;
+    display: block;
+    margin: 15px auto;
+}
+
+.close {
+    font-size: 42px;
+    position: absolute;
+    top: 0;
+    right: 14px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
 
 /**
 #add-image-button,#add-navbar-button {
