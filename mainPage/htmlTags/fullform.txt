@@ -1,28 +1,7 @@
-    <div class="field">
-        <label class="label">Subject</label>
-        <div class="control">
-          <div id="dropdown-selector" class="select">
-            <select>
-              <option>Select</option>
-            </select>
-          </div>
-        </div>
-      </div>
-    
-      <label class="label">Inputs</label>
-      <div id="field-inputs">
-
-      </div>
-
-
-
-
-    <section class="hero has-background-white-ter is-fullheight">
         <div class="hero-body">
             <div class="container">
                 <div class="columns is-centered">
                     <div column is-5-tablet is-4-desktop is-3-widescreen>
-                        <form action="POST" class="box">
 
                             <h3 class="title is-3">Login</h3>
 
@@ -40,11 +19,9 @@
                                 </button>
                             </div>
 
-                        </form>
                     </div>
 
                 </div>
             </div>
 
         </div>
-    </section>
