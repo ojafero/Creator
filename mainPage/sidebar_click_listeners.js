@@ -2,6 +2,7 @@
 let addTextButton = document.querySelector('#add-text-button');
 let addImageButton = document.querySelector('#add-image-button');
 let addNavbarButton = document.querySelector('#add-navbar-button');
+let addFormButton = document.querySelector('#add-form-button');
 
 addTextButton.addEventListener('click',()=>{
     
@@ -43,4 +44,16 @@ addNavbarButton.addEventListener('click',()=>{
     addNavbarButton.style.borderStyle = 'solid';
     addNavbarButton.style.borderColor = 'red';
     currentCategory = typeToAdd.NAVBAR;
+}); 
+
+addFormButton.addEventListener('click',()=>{
+
+    //resetElementClickedOnCanvas
+    resetDivOnCanvasClicked();
+
+    //addTextButton.style.borderRight = "thick solid #0000FF";
+    addFormButton.style.borderWidth = '1px';
+    addFormButton.style.borderStyle = 'solid';
+    addFormButton.style.borderColor = 'red';
+    currentCategory = typeToAdd.FORM;
 }); 

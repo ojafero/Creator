@@ -4,8 +4,7 @@ async function downloadFile(fileName) {
 		
 	if(response.status != 200) {
 		throw new Error("Error occured while downloading the file");
-	}
-		
+	}	
 	// read response stream as text
 	let data = await response.text();
     return data;

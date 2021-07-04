@@ -1,5 +1,6 @@
 const typeToAdd = {
 	TEXT: "text",
 	IMAGE:"image",
-	NAVBAR:"navbar"
+	NAVBAR:"navbar",
+	FORM:"form"
 }

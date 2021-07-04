@@ -32,10 +32,42 @@ function buildDiv(clickedDivId){
             console.log("add navbar to canvas");
             createNavbar(clickedDivId);
             break;
+        case typeToAdd.FORM:
+            createForm(clickedDivId);
+            break;
         default:
             console.log('no case found');
             break;
     }
+}
+
+function createForm(clickedDivId){
+
+    //Parent Node is the node that was clicked on
+    const parentNode = document.querySelector(`#${clickedDivId}`);
+
+      downloadFile('htmlTags/fullform').then((data) => {
+        const formNode = document.createElement('div');
+        formNode.id = "form--container";
+        formNode.innerHTML = data;
+
+        parentNode.appendChild(formNode);
+
+        formNode.addEventListener('click',(event)=>{
+            console.log('form node clicked');
+            currentDivOnCanvasClicked = formNode;
+            formNode.style.borderWidth = '1px';
+            formNode.style.borderStyle = 'solid';
+            formNode.style.borderColor = 'red';
+    
+            emptyTheControlSection();
+    
+        });
+        resetCurrentCategory();
+        removeAddNavbarButtonBorders();
+        
+      });
+
 }
 
 //Attach image to the node where the user clicked on canvas and add an event listener to show control features to edit the image

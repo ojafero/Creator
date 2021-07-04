@@ -50,7 +50,8 @@ hr.solid {
 }
 
 
-#add-image-button,#add-navbar-button,#add-text-button {
+#add-image-button,#add-navbar-button,#add-text-button,
+#add-form-button {
     display: inline-block;
     vertical-align: middle;
     text-align: center;
