@@ -4,10 +4,21 @@ body,html {
     height: 100%;
 }
 
+#logo{
+    padding-top: 20px;
+}
+
+#export-html-container{
+
+    background-color: whitesmoke;
+    border: 1px solid #d7d7d7;
+    text-align: right;
+}
+
 #sidebar {
     position: absolute;
     width: 380px;
-    top: 10%;
+    top: 11%;
     min-height: 120%;
     left: 0px;
     background: #ffffff;
@@ -23,7 +34,7 @@ body,html {
     position: absolute;
     left: 388px;
     width: calc(100% - 388px);
-    top: 10%;
+    top: 11%;
     min-height: 120%;
     background-color:whitesmoke;
 }

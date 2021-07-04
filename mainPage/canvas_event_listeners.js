@@ -10,7 +10,7 @@ canvas.addEventListener('click',(event)=>{
     else if(event.target.id == "canvas"){
         emptyTheControlSection();
         createCanvasController();
-
+        setPersonalizeIndicationWith("Body");
     }
 }); 
 

@@ -30,3 +30,8 @@ function resetPersonalizeIndicator(){
      let indicator = document.getElementById('indicate-personalize-text');
      indicator.innerHTML = "";
 }
+
+function setPersonalizeIndicationWith(nodename){
+    //Set personalize indicator
+    document.getElementById('indicate-personalize-text').innerHTML = `${nodename}`;
+}
