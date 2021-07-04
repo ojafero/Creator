@@ -21,14 +21,14 @@ function returnDividerCSS(textToShow){
 
 function resetPickerIndicator(){
     let indicator = document.getElementById('indicate-button-click-text');
-    indicator.innerText = "Select";
+    indicator.innerText = "Create";
     
 }
 
 function resetPersonalizeIndicator(){
      //Add personalize indicator
      let indicator = document.getElementById('indicate-personalize-text');
-     indicator.innerHTML = "";
+     indicator.innerHTML = "Select";
 }
 
 function setPersonalizeIndicationWith(nodename){
