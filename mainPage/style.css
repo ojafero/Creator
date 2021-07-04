@@ -4,6 +4,7 @@
 body,html {
     height: 100%;
     background-color: whitesmoke;
+    
 }
 
 #logo{
@@ -28,8 +29,9 @@ body,html {
     min-height: 120%;
     left: 0.5%;
     background: #ffffff;
-    border: 1px solid #d7d7d7;
     background-color: whitesmoke;
+    box-shadow:0 22.3px 17.9px rgba(43, 35, 35, 0.2002), 0 100px 80px rgba(0, 0, 0, 0.12)
+    
 }
 
 
@@ -46,6 +48,7 @@ body,html {
     min-height: 120%;
     background-color:whitesmoke;
     border: 1px solid #d7d7d7;
+    
 }
 
 #add-title-bar {
