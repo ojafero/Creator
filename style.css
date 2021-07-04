@@ -1,0 +1,18 @@
+
+@font-face { font-family: Moon; src: url('fonts/Moon_Bold.OTF'); } 
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+#logo{
+    font-family: Moon,sans-serif;
+    font-size: 100px;
+}
+

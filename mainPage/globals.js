@@ -21,7 +21,7 @@ function returnDividerCSS(textToShow){
 
 function resetPickerIndicator(){
     let indicator = document.getElementById('indicate-button-click-text');
-    indicator.innerText = "";
+    indicator.innerText = "Select";
     
 }
 

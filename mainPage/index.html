@@ -39,6 +39,9 @@
     <script defer src="img_controller.js"></script>
     <script defer src="readLocalFile.js"></script>
     <script defer src="navbar_controller.js"></script>
+    <script defer src="popup.js"></script>
+    <script defer src="export.js"></script>
+
     <script>
       function changeToItalics() {
         document.getElementById("demo").style.fontStyle = "italic";
@@ -111,7 +114,7 @@
   </head>
   <body>
     <div id = "logo"> LOGO</div>
-    <div id = "export-html-container">  <button class="button is-success is-light">Export HTML file</button>
+    <div id = "export-html-container">  <button class="button is-success is-light" onclick="downloadInnerHtml('export', 'canvas', 'text/html')">Export HTML file</button>
     </div>
     <div id="sidebar">
       
@@ -157,5 +160,27 @@
             document.getElementById('dummy-test-text').style.backgroundColor = colorPickerValue;
         }**/
     </script>
+
+
+<div class="bg-modal">
+  <div class="modal-content">
+
+      <div class="close">+</div>
+
+      <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png"
+          style= "height:105px;width:105px;" >
+      <form action="">
+          <input type="text" placeholder="Name Your File" class="input-field-popup">
+          <input type="text" placeholder="Email" class="input-field-popup">
+      </form>
+  </div>
+</div>
+
+
+
+
+
+
+
   </body>
 </html>
