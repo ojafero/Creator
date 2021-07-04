@@ -64,9 +64,9 @@ function createCard(clickedDivId){
            
             //Add personalize indicator
             document.getElementById('indicate-personalize-text').innerHTML = "Card";
-    
+            
+            console.log("add card function");
             emptyTheControlSection();
-            createNavbarController();
     
         });
         resetCurrentCategory();
