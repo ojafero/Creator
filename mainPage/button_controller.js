@@ -7,7 +7,7 @@ function createButtonController() {
 
     //Button to delete container
     addDeleteButton (controlContainerDiv)
-    
+
     const dropdown = init_dropdown();
 
     controlContainerDiv.append(dropdown);

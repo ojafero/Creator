@@ -2,18 +2,15 @@
     <div id="navbar-fixed-index" class="navbar-menu">
       <div class="navbar-start">
         <a class="navbar-item">
-          Home
+          First Title
         </a>
         <a class="navbar-item">
-          Documentation
+          Second Title
         </a>
       </div>
       <div class="navbar-end">
         <a class="navbar-item">
-          Contact
-        </a>
-        <a class="navbar-item">
-          End
+          Third Title
         </a>
       </div>
     </div>

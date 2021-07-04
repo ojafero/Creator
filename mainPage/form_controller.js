@@ -20,6 +20,9 @@ function createFormController() {
     //Button to delete container
     addDeleteButton (controlContainerDiv)
 
+    //add divider
+    controlContainerDiv.innerHTML += returnDividerCSS('Headings');
+
     const dropdown = createFormSizeSelector();
 
     controlContainerDiv.append(dropdown);
@@ -33,7 +36,7 @@ function createFormSizeSelector() {
     const inputFields = document.createElement('div');
     
 
-    inputFields.insertAdjacentHTML('beforeend', '<div class="field"> <label class="label">Label</label> <div class="control"> <div id="dropdown-selector" class="select"> <select> <option>Select</option> </select> </div> </div> </div>');
+    inputFields.insertAdjacentHTML('beforeend', '<div class="field"> <label class="label">Label</label> <div class="control"> <div id="dropdown-selector" class="select form-heading-selector"> <select> <option>Select</option> </select> </div> </div> </div>');
     const dropdown = inputFields.querySelector('#dropdown-selector');
     const select = dropdown.firstElementChild;
 

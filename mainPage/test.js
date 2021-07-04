@@ -12,6 +12,8 @@ function addInputField(inputs, heading){
 }
 
 const dropdown = document.querySelector('#dropdown-selector');
+//add another id
+dropdown.setAttribute('id','dropdown-selector form-selector')
 const select = dropdown.firstElementChild;
 
 console.log(select);

@@ -5,6 +5,10 @@ function createImageController(){
     //Button to delete container
     addDeleteButton (controlContainerDiv)
 
+
+     //add divider
+     controlContainerDiv.innerHTML += returnDividerCSS('Image Url');
+
     const imgInputPicker = createImageInputPicker();
 
     const WHPicker = createWHPicker();
@@ -18,13 +22,18 @@ function createImageController(){
 
 function createImageInputPicker(){
     const imageInputPicker = document.createElement('div');
-    imageInputPicker.innerHTML = ('<input id="img-input-field" class="input is-rounded" type="text" placeholder="Add Image Link">');
+
+    imageInputPicker.innerHTML += ('<input id="img-input-field" class="input is-rounded" type="text" placeholder="Add Image Link">');
     return imageInputPicker.querySelector('#img-input-field');
 }
 
 function createWHPicker() {
     const imageHWInputBox = document.createElement('div');
-    imageHWInputBox.innerHTML = ('<input id="img-height-input" class="input is-small" type="text" placeholder="Height">');
+
+     //add divider
+     imageHWInputBox.innerHTML += returnDividerCSS('Image Dimensions');
+
+    imageHWInputBox.innerHTML += ('<input id="img-height-input" class="input is-small" type="text" placeholder="Height">');
     imageHWInputBox.innerHTML += ('<input id="img-width-input" class="input is-small" type="text" placeholder="Width">');
 
     return imageHWInputBox;
