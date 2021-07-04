@@ -34,11 +34,44 @@ function buildDiv(clickedDivId){
         case typeToAdd.FORM:
             createForm(clickedDivId);
             break;
+        case typeToAdd.BUTTON:
+            createCustomButton(clickedDivId);
+            break;
         default:
             console.log('no case found');
             break;
     }
 }
+
+function createCustomButton(clickedDivId){
+
+    const customButtonContainer = document.createElement('div');
+    customButtonContainer.innerHTML='<button class="button is-normal">Normal</button>';
+
+    const customButton = customButtonContainer.querySelector('button');
+
+    customButtonContainer.setAttribute('id',`custom-button-${getUniqueIndex()}`);
+    customButton.innerText= "Click Me!";
+
+    const parentNode = document.querySelector(`#${clickedDivId}`);
+    parentNode.appendChild(customButtonContainer);
+
+    customButtonContainer.addEventListener('click',(event)=>{
+        console.log('button node clicked');
+        currentDivOnCanvasClicked = customButton;
+       
+
+        //Set personalize Indicator
+        document.getElementById('indicate-personalize-text').innerHTML = "Button";
+
+        console.log("Include function here to add more functionality to button");
+
+    }); 
+
+    resetCurrentCategory();
+    removeBordersFrom(addCustomButton);
+
+};
 
 function createForm(clickedDivId){
 
@@ -167,6 +200,10 @@ function createImage(clickedDivId){
     resetCurrentCategory();
     removeAddImageButtonBorders();
 
+}
+
+function removeBordersFrom(pressedButton){
+    pressedButton.style.border = "0.5px solid #000000";
 }
 
 

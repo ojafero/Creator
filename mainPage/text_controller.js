@@ -43,10 +43,10 @@
     //append to container
     const paddingInputPickerContainer = document.createElement('div');
     paddingInputPickerContainer.setAttribute("id",'padding-input-picker-container');
-    paddingInputPickerContainer.innerText = "Padding (top,down,left,right):  ";
+
 
     //add divider
-    paddingInputPickerContainer.innerHTML += returnDividerCSS('Padding');
+    paddingInputPickerContainer.innerHTML += returnDividerCSS('Padding (top,down,left,right)');
 
     //add all 4 directions
     paddingInputPickerContainer.appendChild(topPicker);

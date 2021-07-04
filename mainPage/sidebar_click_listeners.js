@@ -3,6 +3,7 @@ let addTextButton = document.querySelector('#add-text-button');
 let addImageButton = document.querySelector('#add-image-button');
 let addNavbarButton = document.querySelector('#add-navbar-button');
 let addFormButton = document.querySelector('#add-form-button');
+let addCustomButton = document.querySelector('#add-custom-button');
 
 addTextButton.addEventListener('click',()=>{
     
@@ -92,6 +93,27 @@ addFormButton.addEventListener('click',()=>{
     //Add Identifier
     let indicator = document.getElementById('indicate-button-click-text');
     indicator.innerText = "Form";
+
+    resetPersonalizeIndicator();
+}); 
+
+addCustomButton.addEventListener('click',()=>{
+
+    //resetElementClickedOnCanvas
+    resetDivOnCanvasClicked();
+
+     //clear the personalize section
+     emptyTheControlSection();
+
+    //addTextButton.style.borderRight = "thick solid #0000FF";
+    addCustomButton.style.borderWidth = '1px';
+    addCustomButton.style.borderStyle = 'solid';
+    addCustomButton.style.borderColor = 'red';
+    currentCategory = typeToAdd.BUTTON;
+
+    //Add Identifier
+    let indicator = document.getElementById('indicate-button-click-text');
+    indicator.innerText = "Button";
 
     resetPersonalizeIndicator();
 }); 
