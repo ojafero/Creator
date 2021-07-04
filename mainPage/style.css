@@ -37,6 +37,15 @@ body,html {
 #title-bar,#personalize-title-bar{
     margin-left: 20px;
     margin-top: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.23);
+}
+
+#indicate-button-click-text{
+    position: absolute;
+    top: 30px;
+    left: 300px;
+    color: black;
+    font-family: 'Inter', sans-serif;
 }
 
 hr.solidTop {
@@ -72,6 +81,14 @@ hr.solid {
     font-family: 'Inter', sans-serif;
     color: black;
 
+}
+
+#indicate-personalize-text{
+    position: absolute;
+    top: 320px;
+    left: 300px;
+    color: black;
+    font-family: 'Inter', sans-serif;
 }
 
 #color-picker-text{

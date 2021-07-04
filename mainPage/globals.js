@@ -18,3 +18,15 @@ function resetDivOnCanvasClicked(){
 function returnDividerCSS(textToShow){
     return `<div class="is-divider" data-content="${textToShow}"></div>`
 }
+
+function resetPickerIndicator(){
+    let indicator = document.getElementById('indicate-button-click-text');
+    indicator.innerText = "";
+    
+}
+
+function resetPersonalizeIndicator(){
+     //Add personalize indicator
+     let indicator = document.getElementById('indicate-personalize-text');
+     indicator.innerHTML = "";
+}

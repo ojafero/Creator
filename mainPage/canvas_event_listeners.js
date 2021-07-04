@@ -2,8 +2,7 @@ const canvas = document.querySelector('#canvas');
 
 //When canvas is click, check the element type the user wants to build. 
 canvas.addEventListener('click',(event)=>{
-    console.log('clickedCanvas');
-    console.log(event.target);
+    resetPickerIndicator();
     if(currentCategory != null){
        //pass in the id of the location where the user clicked on canvas
         buildDiv(event.target.id);
@@ -59,6 +58,9 @@ function createForm(clickedDivId){
             formNode.style.borderWidth = '1px';
             formNode.style.borderStyle = 'solid';
             formNode.style.borderColor = 'red';
+
+             //Add form indicator
+             document.getElementById('indicate-personalize-text').innerHTML = "Form";
     
             emptyTheControlSection();
     
@@ -86,10 +88,10 @@ function createNavbar(clickedDivId){
         navbarNode.addEventListener('click',(event)=>{
             console.log('navbar node clicked');
             currentDivOnCanvasClicked = navbarNode;
-            navbarNode.style.borderWidth = '1px';
-            navbarNode.style.borderStyle = 'solid';
-            navbarNode.style.borderColor = 'red';
-            console.log('create navbar node here');
+           
+
+            //Add personalize indicator
+            document.getElementById('indicate-personalize-text').innerHTML = "Nav Bar";
     
             emptyTheControlSection();
             createNavbarController();
@@ -115,10 +117,16 @@ function addText(clickedDivId){
     textNode.addEventListener('click',(event)=>{
         console.log('text node clicked');
         currentDivOnCanvasClicked = textNode;
-        textNode.style.borderWidth = '1px';
-        textNode.style.borderStyle = 'solid';
-        textNode.style.borderColor = 'red';
+       
+
+        console.log( document.getElementById('indicate-personalize-text'));
+
+        //Set personalize Indicator
+        document.getElementById('indicate-personalize-text').innerHTML = "Text";
+
+
         createTextController();
+
     }); 
 
     resetCurrentCategory();
@@ -146,13 +154,13 @@ function createImage(clickedDivId){
     imgNode.addEventListener('click',(event)=>{
         console.log('Image node clicked');
         currentDivOnCanvasClicked = imgNode;
-        imgNode.style.borderWidth = '1px';
-        imgNode.style.borderStyle = 'solid';
-        imgNode.style.borderColor = 'red';
-        console.log('create image controller here');
+       
 
         emptyTheControlSection();
         createImageController();
+
+        //Set personalize indicator
+        document.getElementById('indicate-personalize-text').innerHTML = "Image";
 
     });
 
@@ -163,13 +171,13 @@ function createImage(clickedDivId){
 
 
 function removeAddImageButtonBorders(){
-    addImageButton.style.border = "none";
+    addImageButton.style.border = "0.5px solid #000000";
 }
 
 function removeAddTextButtonBorders(){
-    addTextButton.style.border = "none";
+    addTextButton.style.border = "0.5px solid #000000";
 }
 
 function removeAddNavbarButtonBorders(){
-    addNavbarButton.style.border = "none";
+    addNavbarButton.style.border = "0.5px solid #000000";
 }
