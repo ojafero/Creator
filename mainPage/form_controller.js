@@ -28,6 +28,7 @@ function createFormController() {
 
 function createFormSizeSelector() {
     const inputFields = document.createElement('div');
+    
 
     inputFields.insertAdjacentHTML('beforeend', '<div class="field"> <label class="label">Label</label> <div class="control"> <div id="dropdown-selector" class="select"> <select> <option>Select</option> </select> </div> </div> </div>');
     const dropdown = inputFields.querySelector('#dropdown-selector');
@@ -84,3 +85,4 @@ function createFormSizeSelector() {
 
 
 }
+
