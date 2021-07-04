@@ -4,6 +4,7 @@ let addImageButton = document.querySelector('#add-image-button');
 let addNavbarButton = document.querySelector('#add-navbar-button');
 let addFormButton = document.querySelector('#add-form-button');
 let addCustomButton = document.querySelector('#add-custom-button');
+let addCardButton = document.querySelector('#add-card-button');
 
 addTextButton.addEventListener('click',()=>{
     
@@ -117,3 +118,22 @@ addCustomButton.addEventListener('click',()=>{
 
     resetPersonalizeIndicator();
 }); 
+
+// addCardButton.addEventListener('click', () =>{
+//     resetDivOnCanvasClicked();
+
+//     emptyTheControlSection();
+
+//     addCustomButton.style.borderWidth = '1px';
+//     addCustomButton.style.borderStyle = 'solid';
+//     addCustomButton.style.borderColor = 'red';
+//     currentCategory = typeToAdd.CARD;
+
+//     //Add Identifier
+//     let indicator = document.getElementById('indicate-button-click-text');
+//     indicator.innerText = "Card";
+
+//     resetPersonalizeIndicator();
+
+    
+// });
