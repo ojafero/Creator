@@ -125,6 +125,7 @@ hr.solid {
     margin-left: 10px;
     margin-right: 15px;
     width: 310px;
+
 }
 
 #more-controls #navbar-item1-picker {
@@ -157,4 +158,9 @@ hr.solid {
 
 #dropdown-selector input {
     margin-left: -10px;
+}
+
+/* remove with constraints from radio buttons**/
+#radio-inputs input{
+    width: auto;
 }
