@@ -134,21 +134,21 @@ addCustomButton.addEventListener('click',()=>{
     resetPersonalizeIndicator();
 }); 
 
-// addCardButton.addEventListener('click', () =>{
-//     resetDivOnCanvasClicked();
+addCardButton.addEventListener('click', () =>{
+    resetDivOnCanvasClicked();
 
-//     emptyTheControlSection();
+    emptyTheControlSection();
 
-//     addCustomButton.style.borderWidth = '1px';
-//     addCustomButton.style.borderStyle = 'solid';
-//     addCustomButton.style.borderColor = 'red';
-//     currentCategory = typeToAdd.CARD;
+    addCardButton.style.borderWidth = '1px';
+    addCardButton.style.borderStyle = 'solid';
+    addCardButton.style.borderColor = 'red';
+    currentCategory = typeToAdd.CARD;
 
-//     //Add Identifier
-//     let indicator = document.getElementById('indicate-button-click-text');
-//     indicator.innerText = "Card";
+    //Add Identifier
+    let indicator = document.getElementById('indicate-button-click-text');
+    indicator.innerText = "Card";
 
-//     resetPersonalizeIndicator();
+    resetPersonalizeIndicator();
 
     
-// });
+});

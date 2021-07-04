@@ -37,11 +37,46 @@ function buildDiv(clickedDivId){
         case typeToAdd.BUTTON:
             createCustomButton(clickedDivId);
             break;
+        case typeToAdd.CARD:
+            createCard(clickedDivId);
+            break;
         default:
             console.log('no case found');
             break;
     }
 }
+
+function createCard(clickedDivId){
+
+    //Parent Node is the node that was clicked on
+    const parentNode = document.querySelector(`#${clickedDivId}`);
+
+      downloadFile('htmlTags/card').then((data) => {
+        const cardNode = document.createElement('div');
+        cardNode.id = "card--container";
+        cardNode.innerHTML = data;
+
+        parentNode.appendChild(cardNode);
+
+        cardNode.addEventListener('click',(event)=>{
+            console.log('card node clicked');
+            currentDivOnCanvasClicked = cardNode;
+           
+            //Add personalize indicator
+            document.getElementById('indicate-personalize-text').innerHTML = "Card";
+    
+            emptyTheControlSection();
+            createNavbarController();
+    
+        });
+        resetCurrentCategory();
+        removeBordersFrom(addCardButton);
+        
+      });
+
+
+}
+
 
 function createCustomButton(clickedDivId){
 
