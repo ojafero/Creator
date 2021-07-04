@@ -1,5 +1,4 @@
 function createImageController(){
-    emptyTheControlSection();
 
     const controlContainerDiv = document.querySelector("#more-controls");
 

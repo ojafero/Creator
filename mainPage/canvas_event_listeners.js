@@ -8,6 +8,11 @@ canvas.addEventListener('click',(event)=>{
        //pass in the id of the location where the user clicked on canvas
         buildDiv(event.target.id);
     }
+    else if(event.target.id == "canvas"){
+        emptyTheControlSection();
+        createCanvasController();
+
+    }
 }); 
 
 //Build the div depending on category and append the div to the location which the canvas was clicked on
@@ -72,6 +77,8 @@ function createImage(clickedDivId){
         imgNode.style.borderStyle = 'solid';
         imgNode.style.borderColor = 'red';
         console.log('create image controller here');
+
+        emptyTheControlSection();
         createImageController();
 
     });

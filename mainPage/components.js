@@ -14,3 +14,4 @@ function emptyTheControlSection(){
     const controlContainerDiv = document.querySelector("#more-controls");
     controlContainerDiv.innerHTML = "";
 }
+
