@@ -8,7 +8,7 @@ body,html {
     position: absolute;
     width: 380px;
     top: 10%;
-    height: 90%;
+    min-height: 120%;
     left: 0px;
     background: #ffffff;
     border: 1px solid #d7d7d7;
@@ -24,7 +24,7 @@ body,html {
     left: 388px;
     width: calc(100% - 388px);
     top: 10%;
-    height: 90%;
+    min-height: 120%;
     background-color:whitesmoke;
 }
 
@@ -39,7 +39,7 @@ body,html {
     margin-top: 10px;
 }
 
-hr.solid {
+hr.solidTop {
     position: absolute;
     border-top: 3px solid rgb(0, 0, 0);
     top: 26px;
@@ -47,6 +47,10 @@ hr.solid {
     right: 5px;
     margin-left: 20px;
     padding-bottom: 20px;
+}
+
+hr.solid {
+    border-top: 3px solid rgb(187, 187, 187);
 }
 
 
@@ -68,6 +72,12 @@ hr.solid {
     font-family: 'Inter', sans-serif;
     color: black;
 
+}
+
+#color-picker-text{
+    font-family: 'Inter', sans-serif;
+    color: #444444;
+    font-size: 11px;
 }
 
 

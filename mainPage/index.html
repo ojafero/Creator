@@ -19,8 +19,16 @@
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
-    />
+    /> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/js/bulma-extensions.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-divider@0.2.0/dist/css/bulma-divider.min.css">
+
+
+    
+
     <link rel="stylesheet" href="style.css" />
+    
     <script defer src="constants.js"></script>
     <script defer src="globals.js"></script>
     <script defer src="components.js"></script>
@@ -104,7 +112,7 @@
   <body>
     <div id="sidebar">
       <h1 class="title is-2" id="title-bar">Pick</h1>
-      <hr class="solid" />
+      <hr class="solidTop" />
       <div id="buttons-container">
         <div id="add-text-button" data-identifier="0">Text</div>
         <div id="add-image-button" data-identifier="1">Image</div>
@@ -112,6 +120,18 @@
         <div id="add-form-button" data-identifier="1">Form</div>
       </div>
       <h1 class = "title is-2" id = "personalize-title-bar">Personalize</h1>
+      <div class="is-divider" data-content="Color"></div>
+
+<div>
+  <div class="divider is-info">Info</div>
+  <div class="divider is-success">Success</div>
+  <div class="divider is-warning">Warning</div>
+  <div class="divider is-danger">Danger</div>
+  <div class="divider is-info is-light">Info light</div>
+  <div class="divider is-success is-light">Success light</div>
+  <div class="divider is-warning is-light">Warning light</div>
+  <div class="divider is-danger is-light">Danger light</div>
+</div>
       <div id="more-controls">
         <input
           id="text-input-field"

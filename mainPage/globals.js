@@ -14,3 +14,7 @@ function resetCurrentCategory(){
 function resetDivOnCanvasClicked(){
     currentDivOnCanvasClicked = null;
 }
+
+function returnDividerCSS(textToShow){
+    return `<div class="is-divider" data-content="${textToShow}"></div>`
+}

@@ -45,6 +45,9 @@
     paddingInputPickerContainer.setAttribute("id",'padding-input-picker-container');
     paddingInputPickerContainer.innerText = "Padding (top,down,left,right):  ";
 
+    //add divider
+    paddingInputPickerContainer.innerHTML += returnDividerCSS('Padding');
+
     //add all 4 directions
     paddingInputPickerContainer.appendChild(topPicker);
     paddingInputPickerContainer.appendChild(downPicker);
@@ -104,6 +107,9 @@
      const textInputPickerContainer = document.createElement('div');
      textInputPickerContainer.setAttribute("id","text-input-picker-container");
 
+      //add divider
+      textInputPickerContainer.innerHTML += returnDividerCSS('Text');
+
      textInputPickerContainer.appendChild(textInputPicker);
      controlContainerDiv.appendChild(textInputPickerContainer);
  }
@@ -128,6 +134,10 @@
 
  function appendTextColorPicker(controlContainerDiv){
     const textControlDiv = document.createElement('div');
+
+   //add Divider
+   textControlDiv.innerHTML += returnDividerCSS('Color');
+
     textControlDiv.setAttribute("id","color-picker-container");
     let colorPicker = addTextColorPicker();
     textControlDiv.appendChild(colorPicker);
@@ -136,6 +146,10 @@
 
  function appendTextStylePicker(controlContainerDiv){
     const textStylePickerContainer = document.createElement('div');
+
+    //add divider
+    textStylePickerContainer.innerHTML += returnDividerCSS('Style');
+
     textStylePickerContainer.setAttribute("id","text-style-picker-container");
     textStylePicker = addTextStylePicker();
     textStylePickerContainer.appendChild(textStylePicker);
