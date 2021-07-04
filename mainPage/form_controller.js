@@ -17,6 +17,9 @@ function createFormController() {
 
     const controlContainerDiv = document.querySelector("#more-controls");
 
+    //Button to delete container
+    addDeleteButton (controlContainerDiv)
+
     const dropdown = createFormSizeSelector();
 
     controlContainerDiv.append(dropdown);

@@ -1,10 +1,11 @@
  function createTextController(){
     const controlContainerDiv = document.querySelector("#more-controls");
-
-
+    
     //Remove previousController
     emptyControllerDiv(controlContainerDiv);
 
+    //Button to delete container
+    addDeleteButton (controlContainerDiv)
     //Start new Div
     //Create color Picker
     appendTextColorPicker(controlContainerDiv);
@@ -17,6 +18,8 @@
 
     //top-down-left-right
     appendPaddingInputPicker(controlContainerDiv)
+
+    
 
  }
 

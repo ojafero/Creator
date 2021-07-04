@@ -1,6 +1,9 @@
 function createCardController() {
     const controlContainerDiv = document.querySelector("#more-controls");
 
+    //Button to delete container
+    addDeleteButton (controlContainerDiv)
+
     const textFields = [ ];
 
     textFields.push(createTextField('image-1-URL', 'Large Image URL'));

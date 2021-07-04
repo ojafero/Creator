@@ -1,6 +1,11 @@
 function createNavbarController(){
 
     const controlContainerDiv = document.querySelector("#more-controls");
+
+    //Button to delete container
+    addDeleteButton (controlContainerDiv)
+
+    
     let textInputField = createTextInputFieldComponent("navbar-item1-picker","input is rounded","Set title of first");
 
     let textInputFieldForSecondItem = createTextInputFieldComponent("navbar-item2-picker","input is rounded","Set title of second");

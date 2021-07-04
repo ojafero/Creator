@@ -1,8 +1,13 @@
 function createButtonController() {
-    console.log('createButtonController()...');
+
+    emptyTheControlSection();
+
 
     const controlContainerDiv = document.querySelector("#more-controls");
 
+    //Button to delete container
+    addDeleteButton (controlContainerDiv)
+    
     const dropdown = init_dropdown();
 
     controlContainerDiv.append(dropdown);
@@ -13,10 +18,6 @@ function createButtonController() {
     const radioFields = init_radiobuttons();
 
     controlContainerDiv.append(radioFields);
-
-    
-
-    
 
 
 }
