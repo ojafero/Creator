@@ -1,6 +1,6 @@
-<section class= "hero is-small">
-        <div class="hero-body">
-            <div class="container">
+<section class= "hero is-small is-pulled-left">
+        <div class="hero-body is-left">
+            <div class="container is-left">
                 <div class="columns is-centered">
                     <div >
                         <form action="POST" class="box">
