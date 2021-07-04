@@ -90,10 +90,6 @@ function createForm(clickedDivId){
         formNode.addEventListener('click',(event)=>{
             console.log('form node clicked');
             currentDivOnCanvasClicked = formNode;
-            formNode.style.borderWidth = '1px';
-            formNode.style.borderStyle = 'solid';
-            formNode.style.borderColor = 'red';
-
              //Add form indicator
              document.getElementById('indicate-personalize-text').innerHTML = "Form";
     
@@ -203,6 +199,15 @@ function createImage(clickedDivId){
     resetCurrentCategory();
     removeAddImageButtonBorders();
 
+}
+
+function removeAllBordersFromButtons(){
+    removeAddImageButtonBorders();
+    removeAddTextButtonBorders();
+    removeAddNavbarButtonBorders();
+    removeBordersFrom(addCustomButton);
+    removeBordersFrom(addFormButton);
+    removeBordersFrom(addCardButton);
 }
 
 function removeBordersFrom(pressedButton){

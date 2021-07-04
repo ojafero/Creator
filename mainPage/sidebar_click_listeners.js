@@ -14,6 +14,9 @@ addTextButton.addEventListener('click',()=>{
     //clear the personalize section
     emptyTheControlSection();
 
+    //clear the borders from preciously selected buttons
+    removeAllBordersFromButtons();
+
     //addTextButton.style.borderColor = "red";
     //addTextButton.style.borderWidth = "thick";
     console.log(addTextButton.style.borderRight);
@@ -42,6 +45,9 @@ addImageButton.addEventListener('click',()=>{
      //clear the personalize section
      emptyTheControlSection();
 
+     //clear the borders from preciously selected buttons
+    removeAllBordersFromButtons();
+
     addImageButton.style.borderWidth = '1px';
     addImageButton.style.borderStyle = 'solid';
     addImageButton.style.borderColor = 'red';
@@ -64,6 +70,9 @@ addNavbarButton.addEventListener('click',()=>{
      //clear the personalize section
      emptyTheControlSection();
 
+     //clear the borders from preciously selected buttons
+    removeAllBordersFromButtons();
+
     //addTextButton.style.borderRight = "thick solid #0000FF";
     addNavbarButton.style.borderWidth = '1px';
     addNavbarButton.style.borderStyle = 'solid';
@@ -85,6 +94,9 @@ addFormButton.addEventListener('click',()=>{
      //clear the personalize section
      emptyTheControlSection();
 
+     //clear the borders from preciously selected buttons
+    removeAllBordersFromButtons();
+
     //addTextButton.style.borderRight = "thick solid #0000FF";
     addFormButton.style.borderWidth = '1px';
     addFormButton.style.borderStyle = 'solid';
@@ -105,6 +117,9 @@ addCustomButton.addEventListener('click',()=>{
 
      //clear the personalize section
      emptyTheControlSection();
+
+     //clear the borders from preciously selected buttons
+    removeAllBordersFromButtons();
 
     //addTextButton.style.borderRight = "thick solid #0000FF";
     addCustomButton.style.borderWidth = '1px';
