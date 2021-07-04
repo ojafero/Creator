@@ -19,6 +19,8 @@
     //top-down-left-right
     appendPaddingInputPicker(controlContainerDiv)
 
+    appendFontSizer(controlContainerDiv);
+
     
 
  }
@@ -224,3 +226,31 @@
         }
     }
  }
+
+ function appendFontSizer(div) {
+
+   const inputFields = document.createElement('div');
+   inputFields.id = 'font-sizer';
+
+   inputFields.insertAdjacentHTML('beforeend', '<form><input type="number" id="font-sizer" name="font-size" min="1" max="50"></form>');
+
+
+   const fontSizer = inputFields.querySelector('#font-sizer');
+
+   fontSizer.onkeyup = function() {
+      currentDivOnCanvasClicked.style.fontSize = fontSizer.value + 'px';
+   }
+
+   fontSizer.onkeyup = function() {
+      currentDivOnCanvasClicked.style.fontSize = fontSizer.value + 'px';
+   }
+
+   div.append(inputFields);
+
+ }
+
+//  <form action="/action_page.php">
+//   <label for="quantity">Quantity (between 1 and 5):</label>
+//   <input type="number" id="quantity" name="quantity" min="1" max="5">
+//   <input type="submit">
+// </form>
