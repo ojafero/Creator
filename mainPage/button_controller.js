@@ -61,14 +61,14 @@ function init_radiobuttons() {
     const radioColorForm = addRadioForm(inputFields, 'type', '');
     addRadioButtons(radioColorForm, colors, 'types');
 
-    inputFields.appendChild(returnDividerCSS("Border Style - Roundded, Outlined Inverted"));
+    inputFields.appendChild(returnDividerCSS("Border Style - Rounded, Outlined Inverted"));
 
     
     const styles = ['rounded', 'outlined', 'inverted'];
     const radioStyleForm = addRadioForm(inputFields, 'style', '');
     addRadioButtons(radioStyleForm, styles, 'styles');
 
-    inputFields.appendChild(returnDividerCSS("Border Style - Round, Outlined Inverted"));
+    inputFields.appendChild(returnDividerCSS("State"));
 
     const states = ['default', 'hover', 'focus', 'active', 'loading', 'static'];
     const stateStyleForm = addRadioForm(inputFields, 'state', 'Select a button state: ');
