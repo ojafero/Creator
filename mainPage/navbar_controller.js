@@ -6,7 +6,10 @@ function createNavbarController(){
     addDeleteButton (controlContainerDiv)
 
     //add divider
-    controlContainerDiv.innerHTML += returnDividerCSS('Text');
+    const divContained = document.createElement('div');
+    divContained.innerHTML += returnDividerCSS('Text');
+
+    controlContainerDiv.appendChild(divContained);
 
 
     let textInputField = createTextInputFieldComponent("navbar-item1-picker","input is rounded","Set title of first");

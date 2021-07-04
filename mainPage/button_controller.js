@@ -8,12 +8,16 @@ function createButtonController() {
     //Button to delete container
     addDeleteButton (controlContainerDiv)
 
-    const dropdown = init_dropdown();
+    // const dropdown = init_dropdown();
 
-    controlContainerDiv.append(dropdown);
+    // controlContainerDiv.append(dropdown);
+
+    //Seperate delete button from text
+    controlContainerDiv.innerHTML+= returnDividerCSS("Text")
 
     const textField = init_textfield();
     controlContainerDiv.append(textField);
+
 
     const radioFields = init_radiobuttons();
 
@@ -36,41 +40,29 @@ function init_textfield()  {
     return inputFields;
 }
 
-function init_dropdown() {
-
-    const inputFields = document.createElement('div');
-    
-
-    inputFields.insertAdjacentHTML('beforeend', '<div class="field"> <label class="label">Label</label> <div class="control"> <div id="dropdown-selector" class="select"> <select> <option>Select</option> </select> </div> </div> </div>');
-    const dropdown = inputFields.querySelector('#dropdown-selector');
-    const select = dropdown.firstElementChild;
-
-    for(var i = 1; i < 5; i++){
-        select.insertAdjacentHTML('beforeend', '<option value="' + i + '">' + i + '</option>');
-    }
-
-    dropdown.oninput = function(){
-        currentDivOnCanvasClicked.querySelector('button-container');
-    }
-
-    return dropdown;
-    
-
-}
 
 function init_radiobuttons() {
     const inputFields = document.createElement('div');
     inputFields.id = 'radio-inputs';
 
+    inputFields.innerHTML+= returnDividerCSS("Size - Small, Medium, large, FullWidth")
+
     
 
     const sizes = ['small', 'medium', 'large', 'fullwidth'];
-    const displaySizesForm = addRadioForm(inputFields, 'size', 'Select a size: ');
+    const displaySizesForm = addRadioForm(inputFields, 'size','');
     addRadioButtons(displaySizesForm, sizes, 'sizes');
+
+    inputFields.innerHTML+= returnDividerCSS("Color - White, Cyan, Purple, Blue, Green, Red");
+
+
 
     const colors = ['default', 'primary', 'link', 'info', 'success', 'danger'];
     const radioColorForm = addRadioForm(inputFields, 'type', 'Select a type/color: ');
     addRadioButtons(radioColorForm, colors, 'types');
+
+    inputFields.innerHTML+= returnDividerCSS("Color - White, Cyan, Purple, Blue, Green, Red");
+
     
     const styles = ['rounded', 'outlined', 'inverted'];
     const radioStyleForm = addRadioForm(inputFields, 'style', 'Select a style: ');

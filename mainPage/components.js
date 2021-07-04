@@ -18,6 +18,7 @@ function emptyTheControlSection(){
 function addDeleteButton(containerToAppendTo){
     containerToAppendTo.innerHTML += '<button id = "delete-button" style = "width:300px" class="button is-danger">Delete</button>';
     containerToAppendTo.querySelector('#delete-button').addEventListener("click", () => {
+        console.log("delete button clicked");
       currentDivOnCanvasClicked.remove();
       emptyTheControlSection();
       resetPersonalizeIndicator();
