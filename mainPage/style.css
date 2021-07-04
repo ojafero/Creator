@@ -31,7 +31,7 @@ body,html {
 }
 
 
-#add-image-button {
+#add-image-button,#add-navbar-button {
     background-color: yellowgreen;
     height: 50px;
     width: 50px;

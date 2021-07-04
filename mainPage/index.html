@@ -25,6 +25,7 @@
     <script defer src="text_controller.js"></script>
     <script defer src="img_controller.js"></script>
     <script defer src="readLocalFile.js"></script>
+    <script defer src="navbar_controller.js"></script>
     <script>
         function changeToItalics(){
             document.getElementById("demo").style.fontStyle = "italic";
@@ -75,6 +76,20 @@
                 textNode.style.paddingTop = topPaddingField.value; 
             }
 
+           /** downloadFile('htmlTags/navbar').then((data) => {
+              const navbarNode = document.createElement('div');
+              navbarNode.innerHTML = data;
+              
+              let canvasContainer = document.getElementById("canvas");
+              canvasContainer.append(navbarNode);
+              let children = canvasContainer.querySelectorAll('a');
+              console.log(children);
+              textField.onkeyup = function (){
+                children[0].innerText = textField.value;
+              }
+              
+            });**/
+
         });
 
        
@@ -86,6 +101,7 @@
     <div id="sidebar">
       <div id="add-text-button" data-identifier="0">Add Text</div>
       <div id="add-image-button" data-identifier="1">Add Image</div>
+      <div id="add-navbar-button" data-identifier="1">Add navbar</div>
       <div id="more-controls"> 
         <input id = "text-input-field" class="input is-rounded" type="text" placeholder="Top">
         <input style = "width: 60px" id = "text-top-padding-field" class="input is-small" type="text" placeholder="top padding"> 

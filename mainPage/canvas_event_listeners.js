@@ -28,10 +28,49 @@ function buildDiv(clickedDivId){
             console.log('Add image to canvas');
             createImage(clickedDivId);
             break;
+        case typeToAdd.NAVBAR:
+            console.log("add navbar to canvas");
+            createNavbar(clickedDivId);
+            break;
         default:
             console.log('no case found');
             break;
     }
+}
+
+//Attach image to the node where the user clicked on canvas and add an event listener to show control features to edit the image
+function createNavbar(clickedDivId){
+
+    //Parent Node is the node that was clicked on
+    const parentNode = document.querySelector(`#${clickedDivId}`);
+
+      downloadFile('htmlTags/navbar').then((data) => {
+        const navbarNode = document.createElement('div');
+        navbarNode.id = "navigation-bar--container";
+        navbarNode.innerHTML = data;
+
+        parentNode.appendChild(navbarNode);
+
+        navbarNode.addEventListener('click',(event)=>{
+            console.log('navbar node clicked');
+            currentDivOnCanvasClicked = navbarNode;
+            navbarNode.style.borderWidth = '1px';
+            navbarNode.style.borderStyle = 'solid';
+            navbarNode.style.borderColor = 'red';
+            console.log('create navbar node here');
+    
+            emptyTheControlSection();
+            createNavbarController();
+    
+        });
+        resetCurrentCategory();
+        removeAddNavbarButtonBorders();
+        
+      });
+
+
+    
+
 }
 
 function addText(clickedDivId){
@@ -53,6 +92,8 @@ function addText(clickedDivId){
     resetCurrentCategory();
     removeAddTextButtonBorders();
 }
+
+
 
 
 //Attach image to the node where the user clicked on canvas and add an event listener to show control features to edit the image
@@ -95,4 +136,8 @@ function removeAddImageButtonBorders(){
 
 function removeAddTextButtonBorders(){
     addTextButton.style.border = "none";
+}
+
+function removeAddNavbarButtonBorders(){
+    addNavbarButton.style.border = "none";
 }
