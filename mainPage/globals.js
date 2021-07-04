@@ -13,5 +13,4 @@ function resetCurrentCategory(){
 
 function resetDivOnCanvasClicked(){
     currentDivOnCanvasClicked = null;
-
 }

@@ -29,10 +29,8 @@ function createWHPicker() {
 
 function addEventListeners(imgInputPicker, WHPicker) {
 
-    const imgInputBox = imgInputPicker.querySelector('#img-input-field');
-
-    imgInputBox.onkeyup = function() {
-        currentDivOnCanvasClicked.src = imgInputBox.value;
+    imgInputPicker.onkeyup = function() {
+        currentDivOnCanvasClicked.src = imgInputPicker.value;
     }
 
     const imgWidthInputBox = WHPicker.querySelector('#img-width-input');

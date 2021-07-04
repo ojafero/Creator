@@ -104,7 +104,6 @@
      const textInputPickerContainer = document.createElement('div');
      textInputPickerContainer.setAttribute("id","text-input-picker-container");
 
-     //Append elements
      textInputPickerContainer.appendChild(textInputPicker);
      controlContainerDiv.appendChild(textInputPickerContainer);
  }
