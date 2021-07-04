@@ -58,15 +58,17 @@ function init_radiobuttons() {
 
 
     const colors = ['default', 'primary', 'link', 'info', 'success', 'danger'];
-    const radioColorForm = addRadioForm(inputFields, 'type', 'Select a type/color: ');
+    const radioColorForm = addRadioForm(inputFields, 'type', '');
     addRadioButtons(radioColorForm, colors, 'types');
 
-    inputFields.appendChild(returnDividerCSS("Color - White, Cyan, Purple, Blue, Green, Red"));
+    inputFields.appendChild(returnDividerCSS("Border Style - Roundded, Outlined Inverted"));
 
     
     const styles = ['rounded', 'outlined', 'inverted'];
-    const radioStyleForm = addRadioForm(inputFields, 'style', 'Select a style: ');
+    const radioStyleForm = addRadioForm(inputFields, 'style', '');
     addRadioButtons(radioStyleForm, styles, 'styles');
+
+    inputFields.appendChild(returnDividerCSS("Border Style - Round, Outlined Inverted"));
 
     const states = ['default', 'hover', 'focus', 'active', 'loading', 'static'];
     const stateStyleForm = addRadioForm(inputFields, 'state', 'Select a button state: ');
@@ -88,7 +90,7 @@ function addRadioForm(div, id, text) {
 function addRadioButtons(radioField, idList, groupName) {
 
     for(let i = 0; i < idList.length; i++){
-        const code = '<input type="radio" id="' + idList[i] + '" name="' + groupName + '" value="' + idList[i] + '"> <label for="' + idList[i] + '">' + idList[i] + '</label>';
+        const code = '<input type="radio" id="' + idList[i] + '" name="' + groupName + '" value="' + idList[i] + '">';
         radioField.insertAdjacentHTML('beforeend', code);
     
     }
