@@ -68,11 +68,7 @@ function init_radiobuttons() {
     const radioStyleForm = addRadioForm(inputFields, 'style', '');
     addRadioButtons(radioStyleForm, styles, 'styles');
 
-    inputFields.appendChild(returnDividerCSS("State"));
 
-    const states = ['default', 'hover', 'focus', 'active', 'loading', 'static'];
-    const stateStyleForm = addRadioForm(inputFields, 'state', 'Select a button state: ');
-    addRadioButtons(stateStyleForm, states, 'states');
 
 
 
