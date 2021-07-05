@@ -67,6 +67,9 @@ function createCard(clickedDivId){
             
             console.log("add card function");
             emptyTheControlSection();
+
+            const controlContainerDiv = document.getElementById('more-controls');
+            addDeleteButton(controlContainerDiv)
     
         });
         resetCurrentCategory();
