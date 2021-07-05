@@ -38,3 +38,10 @@
     margin-left: -10px;
 }
 
+#font-family-picker-selector {
+    margin-left: 120px;
+}
+
+#font-family-picker-selector input{
+    width: 14px;
+}

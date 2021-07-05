@@ -105,6 +105,9 @@ function createCustomButton(clickedDivId){
 
     }); 
 
+   
+
+
     resetCurrentCategory();
     removeBordersFrom(addCustomButton);
 
@@ -134,6 +137,7 @@ function createForm(clickedDivId){
         });
         resetCurrentCategory();
         removeAddNavbarButtonBorders();
+
         
       });
 
@@ -164,10 +168,14 @@ function createNavbar(clickedDivId){
             createNavbarController();
     
         });
+
+        
         resetCurrentCategory();
         removeAddNavbarButtonBorders();
         
       });
+
+      
 
 
     
@@ -195,6 +203,8 @@ function addText(clickedDivId){
         createTextController();
 
     }); 
+
+   
 
     resetCurrentCategory();
     removeAddTextButtonBorders();
@@ -230,6 +240,10 @@ function createImage(clickedDivId){
         document.getElementById('indicate-personalize-text').innerHTML = "Image";
 
     });
+
+   
+    
+    //document.getElementById('canvas').droppable();
 
     resetCurrentCategory();
     removeAddImageButtonBorders();

@@ -232,6 +232,8 @@
    const inputFields = document.createElement('div');
    inputFields.id = 'font-sizer';
 
+   inputFields.appendChild(returnDividerCSS('Font Size'));
+
    inputFields.insertAdjacentHTML('beforeend', '<form><input type="number" id="font-sizer" name="font-size" min="1" max="50"></form>');
 
 
@@ -261,10 +263,12 @@
 function appendFontFamilyPicker(div) {
 
    const inputFields = document.createElement('div');
-   div.id = 'font-family-picker';
+   inputFields.id = 'font-family-picker';
+
+   inputFields.appendChild(returnDividerCSS('Font - Moon, Inter, Sans-Serif'));
 
    const fontFamilies = [ 'Moon', 'Inter', 'Sans-Serif' ]; 
-   const radioField = addRadioForm1(inputFields, 'font-family-picker-selector', 'Pick a font:');
+   const radioField = addRadioForm1(inputFields, 'font-family-picker-selector', '');
    addRadioButtons1(radioField, fontFamilies, 'font-families');
 
    div.appendChild(inputFields);
@@ -272,7 +276,9 @@ function appendFontFamilyPicker(div) {
 
 function addRadioForm1(div, id, text) {
    const code = '<form id="' + id + '"><p>' + text + '</p></form>';
-   div.insertAdjacentHTML('beforeend', code);
+   const formContainer = document.createElement('div');
+   formContainer.innerHTML = code;
+   div.appendChild(formContainer);
    return div.querySelector('#' + id);
 
 }
