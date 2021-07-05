@@ -234,7 +234,7 @@
 
    inputFields.appendChild(returnDividerCSS('Font Size'));
 
-   inputFields.insertAdjacentHTML('beforeend', '<form><input type="number" id="font-sizer" name="font-size" min="1" max="50"></form>');
+   inputFields.insertAdjacentHTML('beforeend', '<input type="number" id="font-sizer" name="font-size" min="1" max="50">');
 
 
    const fontSizer = inputFields.querySelector('#font-sizer');

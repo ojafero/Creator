@@ -139,6 +139,9 @@ addCardButton.addEventListener('click', () =>{
 
     emptyTheControlSection();
 
+    //clear the borders from preciously selected buttons
+    removeAllBordersFromButtons();
+
     addCardButton.style.borderWidth = '1px';
     addCardButton.style.borderStyle = 'solid';
     addCardButton.style.borderColor = 'red';
