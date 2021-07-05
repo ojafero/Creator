@@ -21,7 +21,7 @@
 
     appendFontSizer(controlContainerDiv);
 
-    
+    appendFontFamilyPicker(controlContainerDiv);    
 
  }
 
@@ -254,3 +254,62 @@
 //   <input type="number" id="quantity" name="quantity" min="1" max="5">
 //   <input type="submit">
 // </form>
+
+// Moon
+// 
+
+function appendFontFamilyPicker(div) {
+
+   const inputFields = document.createElement('div');
+   div.id = 'font-family-picker';
+
+   const fontFamilies = [ 'Moon', 'Inter', 'Sans-Serif' ]; 
+   const radioField = addRadioForm1(inputFields, 'font-family-picker-selector', 'Pick a font:');
+   addRadioButtons1(radioField, fontFamilies, 'font-families');
+
+   div.appendChild(inputFields);
+}
+
+function addRadioForm1(div, id, text) {
+   const code = '<form id="' + id + '"><p>' + text + '</p></form>';
+   div.insertAdjacentHTML('beforeend', code);
+   return div.querySelector('#' + id);
+
+}
+
+function addRadioButtons1(radioField, idList, groupName) {
+
+   for(let i = 0; i < idList.length; i++){
+       const code = '<input type="radio" id="' + idList[i] + '" name="' + groupName + '" value="' + idList[i] + '">';
+       radioField.insertAdjacentHTML('beforeend', code);
+   
+   }
+
+   console.log('Radio Buttons event changer');
+   addRadioButtonChangeEvents1(radioField);
+}
+
+function addRadioButtonChangeEvents1(radioField) {
+
+   console.log('Adding listeners on radio buttons');
+
+   const radioButtons = radioField.querySelectorAll('input');
+
+   console.log(radioButtons);
+
+   for(let i = 0; i < radioButtons.length; i++) {
+
+
+      radioButtons[i].onchange = function() {
+         currentDivOnCanvasClicked.style.fontFamily = radioButtons[i].value;
+         console.log("current div clicked in button");
+         console.log(currentDivOnCanvasClicked)
+
+         console.log('fontFamily is now ' + radioButtons[i].value);
+      }
+
+   }
+   
+
+   console.log('End of Radio Butotn Change');
+}
