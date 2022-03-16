@@ -1,0 +1,22 @@
+#button-title-input-field{
+    height: 40px;
+}
+
+/* remove with constraints from radio buttons**/
+#radio-inputs input{
+    width: 14px;
+    
+}
+
+#radio-inputs #size {
+    margin-left: 100px;
+}
+
+#radio-inputs #type {
+    margin-left: 60px;
+}
+
+#radio-inputs #style {
+    margin-left: 100px;
+}
+

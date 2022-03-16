@@ -1,0 +1,47 @@
+/** All elements inside the extra controller picker**/
+#more-controls div, #more-controls input {
+    margin-left: 10px;
+    margin-right: 15px;
+    width: 310px;
+
+}
+
+#more-controls #navbar-item1-picker {
+    width: 300px;
+}
+
+#delete-button {
+    margin-left: 20px;
+}
+
+#img-width-input {
+    margin-top: 10px;
+}
+
+
+#navbarInputFieldContainer input {
+    margin-bottom: 15px;
+    width: 300px;
+}
+
+
+
+#dropdown-selector label {
+    margin-left: 10px;
+}
+
+.form-heading-selector select {
+    margin-left: 210px;
+}
+
+#dropdown-selector input {
+    margin-left: -10px;
+}
+
+#font-family-picker-selector {
+    margin-left: 120px;
+}
+
+#font-family-picker-selector input{
+    width: 14px;
+}

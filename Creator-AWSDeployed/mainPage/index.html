@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creator</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    /> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/js/bulma-extensions.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-divider@0.2.0/dist/css/bulma-divider.min.css">
+
+
+    
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="more_control_style.css">
+    <link rel="stylesheet" href="button_cont_style.css">
+    
+    <script defer src="constants.js"></script>
+    <script defer src="globals.js"></script>
+    <script defer src="components.js"></script>
+    <script defer src="canvas_controller.js"></script>
+    <script defer src="sidebar_click_listeners.js"></script>
+    <script defer src="canvas_event_listeners.js"></script>
+    <script defer src="text_controller.js"></script>
+    <script defer src="img_controller.js"></script>
+    <script defer src="readLocalFile.js"></script>
+    <script defer src="form_controller.js"></script>
+    <script defer src="button_controller.js"></script>
+    <script defer src="navbar_controller.js"></script>
+    <script defer src="card_controller.js"></script>
+    <script defer src="popup.js"></script>
+    <script defer src="export.js"></script>
+
+  </head>
+  <body>
+    <div id = "logo"> CREATOR</div>
+    <div id = "export-html-container">  <button class="button is-success" onclick="downloadInnerHtml('export', 'canvas-container', 'text/html')">Export HTML file</button>
+    </div>
+    <div id="sidebar">
+      
+      <h1 class="title is-2" id="title-bar">Pick</h1>
+      <div class="tag is-black" id = "indicate-button-click-text">Create</div>
+      
+      <div id="buttons-container">
+        <div id="add-text-button" data-identifier="0">Text</div>
+        <div id="add-image-button" data-identifier="1">Image</div>
+        <div id="add-navbar-button" data-identifier="2">Navbar</div>
+        <div id="add-form-button" data-identifier="3">Form</div>
+        <div id="add-custom-button" data-identifier="3">Button</div>
+        <div id="add-card-button" data-identifier="4">Card</div>
+        <div id="add-message-button" data-identifier="5">Quote</div>
+      </div>
+      <h1 class = "title is-2" id = "personalize-title-bar">Personalize</h1>
+
+      <div class = "tag is-black" id="indicate-personalize-text">Select</div>
+      <div id="more-controls">
+      </div>
+    </div>
+    <div id = "canvas-container" > <div id="canvas" style="width :100%; height: 100%; background-size: cover;
+      background-repeat: no-repeat;"></div></div>
+    <script>
+      /**
+        document.getElementById("color").oninput = function() {
+            document.getElementById('dummy-test-text').style.color = this.value;
+        }
+        function updateTextColor(){
+            let colorPickerValue = document.getElementById('color').value;
+            console.log(colorPickerValue);
+            document.getElementById('dummy-test-text').style.backgroundColor = colorPickerValue;
+        }**/
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
